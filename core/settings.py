@@ -55,7 +55,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000', 
-    'https://your-react-app-url.render.com', 
+    'https://frontend-todo-3ssk.onrender.com/', 
 ]
 
 ROOT_URLCONF = 'core.urls'
