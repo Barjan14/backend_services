@@ -54,7 +54,6 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 
     'https://frontend-todo-3ssk.onrender.com/', 
 ]
 
