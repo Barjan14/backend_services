@@ -51,10 +51,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://frontend-todo-3ssk.onrender.com/', 
+    'https://frontend-todo-3ssk.onrender.com', 
 ]
 
 ROOT_URLCONF = 'core.urls'
