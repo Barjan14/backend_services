@@ -3,6 +3,10 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 from .models import Todo
 from .serializers import TodoSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+
 
 class TodoViewSet(viewsets.ModelViewSet):
     queryset = Todo.objects.all()
@@ -22,3 +26,9 @@ class TodoViewSet(viewsets.ModelViewSet):
         todo = self.get_object()
         todo.delete()
         return Response({"message": "Task deleted successfully"}, status=204)
+
+class SecureHelloView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response({"message": f"Hello, {request.user.username}!"})
